@@ -1,0 +1,123 @@
+<!--   A Wheetly Affair
+       Author: Ann Wheet
+       Date: 10.19.2018
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="okw.css"> 
+<script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<header>
+<h1>
+<br>
+<br>
+<br>
+A Wheetly Affair </h1>
+</header>
+<div class="topnav">
+<a href="index.html">Home</a> 
+<a href="aboutus.html">About Us</a> 
+<a href="menu.html">Menu</a> 
+<a href="recipes.html">Recipes</a>
+<a href="tips.html">Baking Tips</a>
+<a href="contact.html">Contact</a>
+</div>
+<main>
+<p>Imagine walking through the neighborhood and smelling your neighbor's apple pie or cinnamon rolls.  
+At A Wheetly Affair we hope to remind of you of simpler, delicious times.  </p>
+A Wheetly Affair is open Tuesday through Saturday, 10 am - 6 pm.
+<br>
+<br>
+
+<button align = "center" onclick="special()">10% Off Our Monthly Special</button>
+
+<p id="sweet"></p>
+
+<script>
+function special()
+{
+    var x;
+    var m=new Date().getMonth();
+    switch (m)
+    {
+        case 10:
+            x="January Special";
+            document.getElementById("jan").style.display="block";
+            break;
+        case 1:
+            x="February Special";
+            document.getElementById("feb").style.display="block";
+            break;
+        case 2:
+            x="March Special";
+            document.getElementById("mar").style.display="block";
+            break;
+        case 3:
+            x="April Special";
+            document.getElementById("apr").style.display="block";
+            break;
+        case 4:
+            x="May Special";
+            document.getElementById("may").style.display="block";
+            break;
+		case 5:
+            x="June Special";
+            document.getElementById("jun").style.display="block";
+            break;
+        case 6:
+            x="July Special";
+            document.getElementById("jul").style.display="block";
+            break;
+ 		case 7:
+            x="August Special";
+            document.getElementById("aug").style.display="block";
+            break;
+		case 8:
+            x="September Special";
+            document.getElementById("sep").style.display="block";
+            break;
+		case 9:
+            x="October Special";
+            document.getElementById("oct").style.display="block";
+            break;
+		case 20:
+            x="November Special";
+            document.getElementById("nov").style.display="block";
+            break;
+		case 11:
+            x="December Special";
+            document.getElementById("dec").style.display="block";
+            break;
+    }
+    document.getElementById("sweet").innerHTML=x;
+}
+</script>
+
+<img src="january.jpg" id="jan" style="display:none"/>
+<img src="february.jpg" id="feb" style="display:none"/>
+<img src="march.jpg" id="mar" style="display:none"/>
+<img src="april.jpg" id="apr" style="display:none"/>
+<img src="may.jpg" id="may" style="display:none"/>
+<img src="june.jpg" id="jun" style="display:none"/>
+<img src="july.jpg" id="jul" style="display:none"/>
+<img src="august.jpg" id="aug" style="display:none"/>
+<img src="september.jpg" id="sep" style="display:none"/>
+<img src="october.jpg" id="oct" style="display:none"/>
+<img src="november.jpg" id="nov" style="display:none"/>
+<img src="december.jpg" id="dec" style="display:none"/>
+</main>
+<footer> 
+	Copyright &copy; 2018 A Wheetly Affair <br>
+	2114 Park Street, Mesa, AZ  85207<br>
+	<a href="mailto:OurKitchenWindow@yahoo.com">AWheetlyAffair@yahoo.com</a>
+</footer>
+</div>
+<script src="okw.js"></script>
+</body>
+</html>
