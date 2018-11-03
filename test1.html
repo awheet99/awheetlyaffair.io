@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display what day it is today.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+    var x;
+    var d=new Date().getDay();
+    switch (d)
+    {
+        case 0:
+            x="Today it's Sunday";
+            document.getElementById("one").style.display="block";
+            break;
+        case 1:
+            x="Today it's Monday";
+            document.getElementById("two").style.display="block";
+            break;
+        case 2:
+            x="Today it's Tuesday";
+            document.getElementById("three").style.display="block";
+            break;
+        case 3:
+            x="Today it's Wednesday";
+            document.getElementById("four").style.display="block";
+            break;
+        case 4:
+            x="Today it's Thursday";
+            document.getElementById("five").style.display="block";
+            break;
+		case 5:
+            x="Today it's Friday";
+            document.getElementById("six").style.display="block";
+            break;
+        case 6:
+            x="Today it's Saturday";
+            document.getElementById("seven").style.display="block";
+            break;
+    }
+    document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+<img src="january.jpg" id="one" style="display:none"/>
+<img src="february.jpg" id="two" style="display:none"/>
+<img src="march.jpg" id="three" style="display:none"/>
+<img src="april.jpg" id="four" style="display:none"/>
+<img src="may.jpg" id="five" style="display:none"/>
+<img src="june.jpg" id="six" style="display:none"/>
+<img src="july.jpg" id="seven" style="display:none"/>
+</body>
+</html>

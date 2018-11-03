@@ -1,0 +1,258 @@
+/*
+Our Kitchen Window
+Author: Ann Wheet
+Date: 10.19.2018
+*/
+* { box-sizing: border-box; } /* box around header */
+body { background-color: #080808;  /* style for header text */
+		color: #080808;
+		font-family: Verdana,
+		Arial, sans-serif; }
+		
+table { margin-left: auto; margin-right: auto; border: 1px #D2B48C; width: 100%; margin-bottom: 1em; border-collapse: collapse;} /* table style */
+
+td, th { padding: .5em; } /* table cells and table header style */
+
+caption { font-weight: bold; margin: 1em; font-size: 120%; } /* style for caption above the table */
+		  
+/* tr:nth-of-type(even) { background-color: #D7E8E9; } settings for every even row in the table */ 
+                   
+h1 {background-color: light gray; /* style for h1 element */
+background-image: url(pie2.jpg); 
+background-position: right;
+background-repeat: no-repeat;
+height: 250px;
+width: 100%
+padding-left: 1em;
+background-color: #080808;
+color: #Afd275;
+text-align: left;} 
+
+footer { background-color: light gray;  /* style for footer */
+			font-size: small;
+			font-style: italic;
+			text-align: center;
+			padding: 1em; }        
+
+nav { float: left; /* nav setting */
+		 text-align: center;
+         font-weight: bold; 
+		 padding:  1px;
+		 width: 210px;
+		 font-size: medium}
+
+nav a { text-decoration: none; /* nav links */
+			text-align: center;
+			display: block;
+			font-weight:  bold;
+			border-style: inset;
+			border-width: 1px;
+			border-color: #8B4513;
+			padding: 1em;
+			margin-bottom: 1em;}
+
+nav li { list-style-type: none; /* nav list */
+			font-size: 90%;
+			padding-left: 0;
+			font-size: 1.2em;
+}
+
+nav a:link { color: #F4A460; } /* style for link before any action */
+nav a:visited { color: #B8860B; } /* style for visited links */
+nav a:hover { color: #FF8C00;  /* style for the appearance of a link when the mouse hovers over it */
+				border: inset;
+				border-width: 3px;
+				border-color:  #333333 }
+				
+				/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+/* sidebar */
+aside {
+   width: 420px;
+   float: left;
+   //background: rgb(13,177,75);
+}
+
+aside ul {
+   padding: 20px;
+}
+
+aside ul li {
+   padding: 10px;
+   font-size: 24px;
+}
+
+aside ul li:hover {
+   color: rgb(164,191,150);
+   background: rgb(50,34,99);
+}
+
+/* main content */
+article {
+   width: 500px;
+   float: right;
+   text-align: center;
+}
+
+article figure figcaption p {
+   font-size: 16px;
+   color: rgb(164,191,150);
+   padding: 10px 0;
+}
+
+article figure figcaption p a:link {
+   color: rgb(13,177,75);
+}
+
+/* remove blank space for descenders below image */
+article figure img {
+   display: block;
+}
+/* footer */
+footer {
+   background: rgb(164,191,150);
+   width: 100%;
+   clear: both;
+   font-size: 14px;
+   padding: 10px;
+}
+
+footer p {
+   text-align: center;
+}
+
+#wrapper { background-color: #F5F5F5; /* wrapper element style */
+				color: #3F2860;
+				width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+				min-width: 550px;
+				max-width: 1280px; }
+
+main { padding-top: 0; /* padding and margins for main */
+			padding-right: 3em;
+			padding-left: 3em;
+			padding-bottom: 3em; 
+			margin-left: 50px;
+			background-color: #F5F5F5}
+
+#floatleft { float: left;
+				margin-right: 4em; } /* float left to help with placement of text around picture */
+
+#clear { clear: both; }
+
+header, main, nav, footer, figure, figcaption, aside, section, article { display: block; } /* display: block assists with resizing of pages on different devices */
+
+mobile { display: none; }
+
+desktop { display: inline; }
+
+label {float: left; display: block; text-align: right; width: 10em; padding-right: 1em; } /* used for labels on the form */
+
+input, textarea { display: block; margin-bottom: 2em; } /* text area on the form */
+
+submit {margin-left: 12em; } /* submit button */
+
+form {padding: 3em; }
+
+map {
+    display: inline; /* image map element */
+} 
+
+
+@media only screen and (max-width: 64em) {/* allows website to adjust for desktop and mobile devices */
+	body { margin: 0;
+			padding: 0; }
+	wrapper { min-width: 0;
+				width: auto;
+				margin: 0;
+				padding: 0; }
+	header { padding: 1px; }
+	main { padding-top: 0;
+			padding-bottom: 2.5em;
+			padding-left: 1em;
+			padding-right: 1em;
+			margin: 0;
+			font-size: 90%;
+			float: none; }
+	nav { float: none;
+			width: auto;
+			padding-left: 2em; }
+	
+	nav a { padding: .2em; 
+			margin-left: .3em;
+			float: left;
+			width: 23% }
+
+	h2, h3, p, dl {padding-left: 2em;
+				padding-right: 2em; }
+				
+	floatleft { margin-left: 2em;
+				margin-bottom: 1em; }
+				
+	clear { padding-left: 2em; }
+
+	label { float: none; text-align: left; }
+	input[type="submit"] { margin-left: 0; }
+}
+
+@media only screen and (max-width: 37.5em) { /* allows website to resize for mobile devices */
+
+h1 {font-size: 2em;
+		padding-top: .25em;
+		padding-left: 1.5em;
+		width: 85%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+nav a { padding: .5em;
+			margin-left: .5em;
+			float: left;
+			width: 45%;
+			min-width: 6em;
+	}
+
+li { font-size: 100% }
+
+floatleft { float: none;
+				display: none;
+			}
+
+footer { padding: .5em;
+			margin: 0;
+		}	
+		
+mobile {display: inline; }
+
+desktop {display: none; } 
+	
+}
+
+
+
