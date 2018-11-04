@@ -28,6 +28,11 @@ background-color: #080808;
 color: #Afd275;
 text-align: left;} 
 
+#opdbread { background-image: url("opdbread.jpg");
+			background-size:  50%;
+			background-repeat: no-repeat;
+			height: 300px; }
+
 footer { background-color: light gray;  /* style for footer */
 			font-size: small;
 			font-style: italic;
