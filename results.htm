@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact Us</title>  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="okw.css"> 
+<script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<header>
+<h1>
+<br>
+<br>
+<br>
+A Wheetly Affair </h1>
+</header>
+<div class="topnav">
+<a href="index.html">Home</a> 
+<a href="aboutus.html">About Us</a> 
+<a href="menu.html">Gallery</a> 
+<a href="order.html">Order Form</a>
+<a href="recipes.html">Recipes</a>
+<a href="tips.html">Baking Tips</a>
+<a href="registration.html">Register</a>
+<a href="security.html">Security</a>
+<a href="contact.html">Contact</a>
+</div>
+      
+
+      <h2>Your form has been submitted</h2>
+      <div class="results">
+         <h3>You entered the following data:</h3>
+   
+         <script>
+             var formData = location.search;
+             formData = formData.substring(1, formData.length);
+             while (formData.indexOf("+") !== -1) {
+                formData = formData.replace("+", " ");
+             }
+             formData = decodeURIComponent(formData);
+             var formArray = formData.split("&");
+             for (var i = 0; i < formArray.length; i = i + 1) {
+                document.write("<p>" + formArray[i] + "</p>");
+             }
+         </script>
+      </div>
+
+<footer> 
+	Copyright &copy; 2018 A Wheetly Affair <br>
+	2114 Park Street, Mesa, AZ  85207<br>
+	<a href="mailto:OurKitchenWindow@yahoo.com">AWheetlyAffair@yahoo.com</a>
+</footer>
+</body>
+</html>
