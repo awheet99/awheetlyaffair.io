@@ -1,0 +1,66 @@
+<!--   A Wheetly Affair
+       Author: Ann Wheet
+       Date: 11.19.2018
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Date Check</title>  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="okw.css"> 
+<script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<header>
+<h1>
+<br>
+<br>
+<br>
+A Wheetly Affair </h1>
+</header>
+<div class="topnav">
+<a href="index.html">Home</a> 
+<a href="aboutus.html">About Us</a> 
+<a href="menu.html">Gallery</a> 
+<a href="order.html">Order Form</a>
+<a href="recipes.html">Recipes</a>
+<a href="tips.html">Baking Tips</a>
+<a href="registration.html">Register</a>
+<a href="security.html">Security</a>
+<a href="datecheck.html">Date Calc</a>
+<a href="contact.html">Contact</a>
+</div>
+<main>
+<br>
+Let's calculate the difference between 2 dates.  Enter a date in the past:
+<input type="date" id="date">
+<input type="button" value="Calculate" onclick="dateCalc()">
+<script type="text/javascript">
+
+function dateCalc(){
+// Why in the world is the date I entered off by 1 day?  GMT???
+var date=document.getElementById("date").value;
+var enteredDate= new Date(date); //grabs date entered
+var today = new Date(); //gets the current date
+var timeDiff = today.getTime() - enteredDate.getTime(); //finds the difference in seconds
+var DaysDiff = timeDiff / (1000 * 3600 * 24); //convert the seconds to days
+var year=parseInt(DaysDiff/365); //converts days to years
+DaysDiff=DaysDiff-(year*365); // calculates the remainder after removing years
+var month=parseInt(DaysDiff/30); //takes remainder and calculates months
+DaysDiff=parseInt(DaysDiff-(month*30)); //calculates the remainder after removing months
+document.write("The difference between "+enteredDate+" and "+today+" is: " + year +" Year(s) "
+	+ month +" Month(s) "+ DaysDiff +" Days(s)");
+}
+</script>
+</main>
+<footer> 
+	Copyright &copy; 2018 A Wheetly Affair <br>
+	2114 Park Street, Mesa, AZ  85207<br>
+	<a href="mailto:OurKitchenWindow@yahoo.com">AWheetlyAffair@yahoo.com</a>
+</footer>
+</div>
+<script src="okw.js"></script>
+</body>
+</html>
