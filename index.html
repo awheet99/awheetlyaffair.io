@@ -8,7 +8,7 @@
 <title>Home</title>  
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="okw.css"> 
+<link rel="stylesheet" href="styles.css"> 
 <script src="modernizr.custom.05819.js"></script>
 </head>
 <body>
@@ -18,31 +18,64 @@
 <br>
 <br>
 <br>
-A Wheetly Affair </h1>
+<p> A Wheetly Affair </p><br>
+<p>Imagine walking through the neighborhood and smelling your neighbor's </p>
+<p>apple pie or cinnamon rolls.  
+At A Wheetly Affair, we hope to remind of you </p>
+<p>of simpler, delicious times.  </p>
+<br>
+<p>A Wheetly Affair is open Tuesday through Saturday, 10 am - 6 pm. </p></h1>
 </header>
-<div class="topnav">
-<a href="index.html">Home</a> 
-<a href="aboutus.html">About Us</a> 
-<a href="menu.html">Gallery</a> 
-<a href="order.html">Order Form</a>
-<a href="recipes.html">Recipes</a>
-<a href="tips.html">Baking Tips</a>
-<a href="registration.html">Register</a>
-<a href="security.html">Security</a>
-<a href="datecheck.html">Date Calc</a>
-<a href="contact.html">Contact</a>
-</div>
+<br>
+<br>
+<br>
+ <nav>
+      <ul class="mainmenu">
+         <li><p><a href="index.html">Home</a></p>
+            <ul>
+			   <li><a href="index.html">Home</a></li>
+               <li><a href="aboutus.html">About Us</a></li>
+               <li><a href="tips.html">Baking Tips</a></li>
+               <li><a href="contact.html">Contact</a></li>
+            </ul>
+         </li>
+         <li><p><a href="menu.html">Gallery</a></p>
+            <ul>
+               <li><a href="menu.html">Gallery</a></li>
+               <li><a href="order.html">Order Form</a></li>
+               <li><a href="recipes.html">Recipes</a></li>
+               <li><a href="registration.html">Register</a></li>
+            </ul>
+         </li>
+         <li><p><a href="security.html">Security</a></p>
+            <ul>
+               <li><a href="security.html">Security</a></li>
+               <li><a href="datecheck.html">Date Calc</a></li>
+               <li><a href="ajaxtry.html">Ajax Exercise</a></li>
+            </ul>
+         </li>
+      </ul>
+	  <br>
+   </nav>
 <main>
-<p>Imagine walking through the neighborhood and smelling your neighbor's apple pie or cinnamon rolls.  
-At A Wheetly Affair we hope to remind of you of simpler, delicious times.  </p>
-A Wheetly Affair is open Tuesday through Saturday, 10 am - 6 pm.
 <br>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <button align = "center" onclick="special()">10% Off Our Monthly Special</button>
 
 <p id="sweet"></p>
-
+<br>
 <script>
 function special()
 {
@@ -122,6 +155,7 @@ function special()
 	<a href="mailto:OurKitchenWindow@yahoo.com">AWheetlyAffair@yahoo.com</a>
 </footer>
 </div>
-<script src="okw.js"></script>
+   <script src="jquery-1.11.1.js"></script>
+   <script src="scriptjq.js"></script>
 </body>
 </html>

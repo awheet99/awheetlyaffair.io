@@ -100,6 +100,24 @@ function setUpPage() {
 	createEventListeners();
 }
 
+function validateZipCodePattern(billZip){
+	var BillingZip = /^\d{5}$|^\d{5}-\d{4}$/;
+return BillingZip.test(elementValue);
+
+function cardnumber(inputtxt)
+{
+  var cardno = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+  if(inputtxt.value.match(cardno))
+        {
+      return true;
+        }
+      else
+        {
+        alert("Not a valid Visa credit card number!");
+        return false;
+        }
+}
+
 /* run setup function when page finishes loading */
 if (window.addEventListener) {
 	window.addEventListener("load", setUpPage, false);

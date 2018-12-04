@@ -32,6 +32,7 @@ A Wheetly Affair </h1>
 <a href="registration.html">Register</a>
 <a href="security.html">Security</a>
 <a href="datecheck.html">Date Calc</a>
+<a href="ajaxtry.html">Ajax Exercise</a>
 <a href="contact.html">Contact</a>
 </div>
 
@@ -40,7 +41,7 @@ A Wheetly Affair </h1>
       <div id="errorText"></div>
       <form action="results.htm">
 	  
-         <fieldset id="message" class="checks">
+         <fieldset id="message" class="checks" required="required">
 		 
             <legend>Select Items</legend>
 			
@@ -64,21 +65,23 @@ A Wheetly Affair </h1>
 			
           </fieldset>
 		  
+		  
+		  
          <fieldset id="billingAddress" class="text">
 		 
             <legend>Billing Address</legend>
 
 			<label for="billFName">First Name</label>			
-            <input id="billFName" name="BillingFirstName" type="text" required="required" />            
+            <input id="billFName" name="BillingFirstName" type="text" required="required" placeholder="First Name"/>            
 
             <label for="billLName">Last Name</label>
-            <input id="billLName" name="BillingLastName" type="text" required="required" />			
+            <input id="billLName" name="BillingLastName" type="text" required="required" placeholder="Last Name"/>			
 
             <label for="billStreet">Address</label>
-            <input id="billStreet" name="BillingStreet" type="text" required="required" />			
+            <input id="billStreet" name="BillingStreet" type="text" required="required" placeholder="Delivery Street Address"/>			
 
             <label for="billCity">City</label>
-            <input id="billCity" name="BillingCity" type="text" required="required" />			
+            <input id="billCity" name="BillingCity" type="text" required="required" placeholder="Delivery City"/>			
 
             <label for="billState">State</label>
             <select id="billState" name="BillingState" required="required">
@@ -137,11 +140,23 @@ A Wheetly Affair </h1>
 			
 			<br><br>
             <label for="billZip">ZIPCode</label> 
-            <input id="billZip" name="BillingZip" type="number" required="required" />
+            <input id="billZip" name="BillingZip" type="number" required="required" placeholder="ZipCode"/>
 			
             <label for="billPhone">Phone</label>
-            <input id="billPhone" name="BillingPhone" type="number" required="required" />
+            <input id="billPhone" name="BillingPhone" type="number" required="required" placeholder="Phone Number"/>
 			
+			<label for="myEmail">E-mail*</label>
+			<input type="email" name="myEmail" id="myEmail" required="required" placeholder="E-Mail Address">
+			
+			<label for="referral">How did you hear about us?</label>  
+			<input type="text" name="referral" id="referral" list="referrals" placeholder="Click to Choose" required="required">
+				<datalist id="referrals">
+						<option>Google</option>
+						<option>Bing</option>
+						<option>Facebook</option>
+						<option>Friend</option>
+						<option>Radio Ad</option>
+				</datalist>
             <div class="errorMessage"></div>
 			
          </fieldset>
@@ -213,7 +228,7 @@ A Wheetly Affair </h1>
 		 
             <legend>Payment</legend>
 			
-            <div id="cards" class="inline">
+            <div id="cards" class="inline" required="required">
 
                <input id="visa" name="PaymentType" type="radio" value="Visa" />
 			   <label for="visa">Visa</label>
@@ -282,6 +297,8 @@ A Wheetly Affair </h1>
          </div>
       </form>
 
+}
+
 </main>
 <footer> 
 	Copyright &copy; 2018 A Wheetly Affair <br>
@@ -290,5 +307,7 @@ A Wheetly Affair </h1>
 </footer>
 </div>
    <script src="order.js"></script>
+
+   
 </body>
 </html>

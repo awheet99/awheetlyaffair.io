@@ -1,14 +1,14 @@
 <!--   A Wheetly Affair
        Author: Ann Wheet
-       Date: 11.11.2018
+       Date: 11.19.2018
 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Recipes</title>  
+<title>Ajax Try</title>  
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="okw.css"> 
+<link rel="stylesheet" href="ajaxtry.css"> 
 <script src="modernizr.custom.05819.js"></script>
 </head>
 <body>
@@ -34,21 +34,33 @@ A Wheetly Affair </h1>
 <a href="contact.html">Contact</a>
 </div>
 <main>
-<h2> Web Security</h2>
-<p> Have you ever wondered how much information a website can get from a user's computer?  Believe it or not, 
-web applications can tell things about your computer.  Here are a few things that can be identified:</p>
-<ul>
-	<li> The onLine property can determine whether a browser has a network connection.</li>
-	<li> The platform property can determine which operating system is in use on the computer.</li>
-	<li> The appName and appVerison properties can determine the name and version of the web browser displaying the page.</li>
-	<li> The availHeight and availWidth properties can deermine the height and width of the display excluding OS features like the Windows taskbar. </li>
-</ul>	
-<p>Here's an example of the console messages:</p>
+<h1>The XMLHttpRequest Object</h1>
 
-<img src="console.jpg"/>
-	
-	
-<br>
+<h3>Start typing a name in the input field below:</h3>
+
+<form action=""> 
+Name: <input type="text" id="txt1" onkeyup="showHint(this.value)">
+</form>
+
+<p>Suggestions: <span id="txtHint"></span></p> 
+
+<script>
+function showHint(str) {
+  var xhttp;
+  if (str.length == 0) { 
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "nameit.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
 </main>
 <footer> 
 	Copyright &copy; 2018 A Wheetly Affair <br>
